@@ -18,7 +18,7 @@ import org.junit.jupiter.api.BeforeEach;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/* 
+/*
 public class Week2PracticeTest {
     private MockTelemetryBackend backend;
 
@@ -72,6 +72,21 @@ public class Week2PracticeTest {
         assertEquals(1.00, rightMotorSpeed, 0.001, "rightMotorSpeed should be 1.00");
     }
 
+    public final class Constants{
+        // TODO create a public static final boolean named IS_TESTING and set it to true
+        // TODO create a public static final double named MAX_SPEED and set it to 10
+        // TODO create a public static final int named TEAM_NUMBER and set it to 6619
+        
+    }
+
+    @Test
+    public void test3_CreateConstantVariables(){
+        // --- DO NOT MODIFY BELOW THIS LINE ---
+        assertEquals(Constants.IS_TESTING, true);
+        assertEquals(Constants.MAX_SPEED, 10.0, 0.001);
+        assertEquals(Constants.TEAM_NUMBER, 6619);
+    }
+
 
     // =========================================================================
     // LESSON 2.2: CONDITIONALS & BOOLEAN LOGIC
@@ -98,8 +113,8 @@ public class Week2PracticeTest {
     
 
     @Test
-    public void test3_Telemetry(){
-        // Use Telemetry.log() to log each value
+    public void test4_Telemetry(){
+        // TODO Use Telemetry.log() to log each value
         double speed = 10;
         // log speed with name "speed"
 
@@ -134,10 +149,8 @@ public class Week2PracticeTest {
     }
 
     
-    // TODO Uncomment out these tests
-    // Hint: highlight both tests and use Ctrl + /
     @Test
-    public void test4_ControlFlowAndConditionals() {
+    public void test5_ControlFlowAndConditionals() {
         assertEquals(0.0, calculateSafeSpeed(0.8, true), "Should return 0.0 when emergency stop is active");
         assertEquals(1.0, calculateSafeSpeed(1.5, false), "Should cap requested speed above 1.0 down to 1.0");
         assertEquals(-1.0, calculateSafeSpeed(-1.2, false), "Should cap requested speed below -1.0 up to -1.0");
@@ -145,7 +158,7 @@ public class Week2PracticeTest {
     }
     
     @Test
-    public void test5_BooleanLogicOperators() {
+    public void test6_BooleanLogicOperators() {
         assertTrue(isRobotReadyToDrive(true, true, false), "Robot should be ready when powered, connected, and error-free");
         assertFalse(isRobotReadyToDrive(false, true, false), "Robot should NOT be ready without battery power");
         assertFalse(isRobotReadyToDrive(true, false, false), "Robot should NOT be ready without DS connection");
