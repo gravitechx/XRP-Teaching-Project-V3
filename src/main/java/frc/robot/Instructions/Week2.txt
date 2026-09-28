@@ -1,0 +1,25 @@
+(Commit Practice Changes before starting project)
+
+Lesson 2.1 
+    Navigate to java/frc/robot/constants
+
+    Inside of Constants create a left motor port variable with the value 1
+    Create another variable called right motor port with the value 2
+    Before both variables put public static final
+    Ex: public static final String name = “Bob”;
+
+    (Commit and push all project changes)
+
+Lesson 2.2
+    1. In each of the methods (AutonomousInit, TeleopInit, UtilityInit)
+    2. Log the mode with the name "Robot Mode"
+        When the robot enters the Autonomous mode it will log "Autonomous" under "Robot Mode"
+    Check Telemetry
+        1. Use "Ctrl+Shift+P" then "WPILib: Simulate Robot Code"
+        2. Click "Teleoperated"
+        3. Open the App Elastic 
+            3.a Go to "Settings" and set "IP Address Mode" to "Localhost (127.0.0.1)
+        4. Click on "Add Widget"
+        5. Open the "Robot" folder and drag "Robot Mode" onto grid
+        6. You should see "Robot Mode" change when you switch between modes (In robot simulation tab)
+    (Commit and push all project changes)

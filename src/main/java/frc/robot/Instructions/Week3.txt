@@ -1,0 +1,30 @@
+(Commit Practice Changes before starting project)
+
+Lesson 3.1 
+    Create a Mechanism
+        1. Right click on "robot" in "java/frc/robot" and click "New Folder..."
+        2. Name it "mechanisms" (lowercase)
+        3. Right click on "mechanisms" and "New File"
+        4. Name it "Drivetrain.java"
+        5. Use Telemetry.log to log the name "Created Drivetrain" as "true" 
+    
+    (Commit and push all project changes)
+
+Lesson 3.2
+    Add Variables 
+        1. Declare the following instance variables:
+            a. Left motor ID
+            b. Right motor ID
+        2. Create a constructor
+        3. Set left motor ID to 0 and right motor ID to 1
+    Create Drivetrain instance
+        1. Go to Robot.java
+        2. Create a Drivetrain instance variable 
+        3. Assign that variable to a new Drivetrain instance
+    Test 
+        1. Use "Ctrl+Shift+P" then "WPILib: Simulate Robot Code"
+        2. Open
+    
+
+
+    (Commit and push all project changes)

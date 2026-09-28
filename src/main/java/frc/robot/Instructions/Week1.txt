@@ -1,0 +1,16 @@
+Git Steps Before Exiting
+
+Commit Changes
+    1. Go to the "Source Control" tab
+    2. Use the plus sign to stage each file
+    3. In the message box, type a short description about what you did
+        EX: "Finished week 1 tests"
+    4. Click "Commit"
+
+Push Changes
+    1. If "Publish Branch" shows up click it
+        Otherwise do "Ctrl+Shift+P" then "Git:Push"
+Checkout to Main Branch
+    1. Use "Ctrl+Shift+P" then "Git:Checkout to"
+        Click/Type "Main" to switch
+
