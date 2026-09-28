@@ -3,13 +3,13 @@ package practice;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Week 3 Practice Problems: Classes, Constructors, Fields & Parameters
- * * Instructions:
- * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
- * 2. Complete the classes and constructor logic below so all tests pass.
- * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
- */
+
+//  * Week 3 Practice Problems: Classes, Constructors, Fields & Parameters
+//  * * Instructions:
+//  * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
+//  * 2. Complete the classes and constructor logic below so all tests pass.
+//  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
+ 
 
 /*
 public class Week3PracticeTest {
@@ -22,7 +22,7 @@ public class Week3PracticeTest {
     // TODO: Define instance fields for this class.
     public static class PracticeFlywheel {
         // TODO: Declare two private instance fields:
-        // 1. An int named 'canID'
+        // 1. An int named 'canID' (CAN id is the number we identify the motor with)
         // 2. A double named 'maxRPM'
         
 
@@ -101,4 +101,5 @@ public class Week3PracticeTest {
         assertNotEquals(elevatorA.getGearRatio(), elevatorB.getGearRatio(), "Elevator objects should have distinct gear ratios");
     }
 }
+
 */

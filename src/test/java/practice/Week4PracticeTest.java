@@ -3,13 +3,13 @@ package practice;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Week 4 Practice Problems: Java Methods, Parameters, & Return Values
- * * Instructions:
- * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
- * 2. Complete the methods and internal logic below so all tests pass.
- * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
- */
+
+//  * Week 4 Practice Problems: Java Methods, Parameters, & Return Values
+//  * * Instructions:
+//  * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
+//  * 2. Complete the methods and internal logic below so all tests pass.
+//  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
+
 
 /*
 public class Week4PracticeTest {
