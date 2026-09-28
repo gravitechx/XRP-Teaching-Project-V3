@@ -95,7 +95,6 @@ public class Week4PracticeTest {
     // =========================================================================
     // JUNIT UNIT TESTS
     // =========================================================================
-    // TODO Uncomment tests 
     // @Test
     public void test1_VoidMethodsAndStateChanges() {
         PracticeFlywheel flywheel = new PracticeFlywheel();
