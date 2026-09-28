@@ -1,18 +1,26 @@
 package practice;
 
 import org.junit.jupiter.api.Test;
+import org.wpilib.telemetry.MockTelemetryBackend;
+import org.wpilib.telemetry.Telemetry;
+import org.wpilib.telemetry.TelemetryRegistry;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Week 2 Practice Problems: Java Fundamentals & Logic Testing
- * * Instructions:
- * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
- * 2. Edit the variables and logic below so all tests pass.
- * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
- */
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
-/*
+
+//  * Week 2 Practice Problems: Java Fundamentals & Logic Testing
+//  * * Instructions:
+//  * 1. Run these tests via WPILib Command Palette: "WPILIB: Test Robot Code"
+//  * 2. Edit the variables and logic below so all tests pass.
+//  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
+ 
+
+/* 
 public class Week2PracticeTest {
+    private MockTelemetryBackend backend;
 
     // =========================================================================
     // LESSON 2.1: VARIABLES & COMMENTS
@@ -87,6 +95,31 @@ public class Week2PracticeTest {
     }
 
     
+    
+
+    @Test
+    public void test3_Telemetry(){
+        // Use Telemetry.log() to log each value
+        double speed = 10;
+        // log speed with name "speed"
+
+        double batteryVoltage = 12.5;
+        // log batteryVoltage with name "batteryVoltage"
+
+        String status = "OK";
+        // log status with name "status"
+
+        boolean isEnabled = true;
+        // log isEnabled with name "isEnabled"
+        
+        // --- DO NOT MODIFY BELOW THIS LINE ---
+        assertTrue(backend.getLastAction("speed").value().toString().contains("10"), "Telemetry speed value should be 10");
+        assertTrue(backend.getLastAction("batteryVoltage").value().toString().contains("12.5"), "Telemetry batteryVoltage value should be 12.5");
+        assertTrue(backend.getLastAction("status").value().toString().contains("OK"), "Telemetry status value should be 'OK'");
+        assertTrue(backend.getLastAction("isEnabled").value().toString().contains("true"), "Telemetry isEnabled value should be true");
+    }
+
+    
     // Helper method simulating boolean operations for subsystem readiness.
     private boolean isRobotReadyToDrive(boolean hasBatPower, boolean isDSConn, boolean hasProblems) {
         boolean hasBatteryPower = hasBatPower;
@@ -99,10 +132,12 @@ public class Week2PracticeTest {
         
         return returnValue;
     }
+
+    
     // TODO Uncomment out these tests
     // Hint: highlight both tests and use Ctrl + /
     @Test
-    public void test3_ControlFlowAndConditionals() {
+    public void test4_ControlFlowAndConditionals() {
         assertEquals(0.0, calculateSafeSpeed(0.8, true), "Should return 0.0 when emergency stop is active");
         assertEquals(1.0, calculateSafeSpeed(1.5, false), "Should cap requested speed above 1.0 down to 1.0");
         assertEquals(-1.0, calculateSafeSpeed(-1.2, false), "Should cap requested speed below -1.0 up to -1.0");
@@ -110,11 +145,18 @@ public class Week2PracticeTest {
     }
     
     @Test
-    public void test4_BooleanLogicOperators() {
+    public void test5_BooleanLogicOperators() {
         assertTrue(isRobotReadyToDrive(true, true, false), "Robot should be ready when powered, connected, and error-free");
         assertFalse(isRobotReadyToDrive(false, true, false), "Robot should NOT be ready without battery power");
         assertFalse(isRobotReadyToDrive(true, false, false), "Robot should NOT be ready without DS connection");
         assertFalse(isRobotReadyToDrive(true, true, true), "Robot should NOT be ready if there are active errors");
+    }
+
+    @BeforeEach
+    public void setupTelemetry(){
+        TelemetryRegistry.reset();
+        backend = new MockTelemetryBackend();
+        TelemetryRegistry.registerBackend("/", backend);
     }
 }
 */
