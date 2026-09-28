@@ -114,7 +114,13 @@ public class Week2PracticeTest {
 
     @Test
     public void test4_Telemetry(){
-        // TODO Use Telemetry.log() to log each value
+        // TODO Use Telemetry.log(name, value) to log each value
+        // Example: pass in the name and value to the method
+        int age = 10;
+        // log age with name "yearsOld"
+        Telemetry.log("yearsOld", age);
+
+
         double speed = 10;
         // log speed with name "speed"
 
