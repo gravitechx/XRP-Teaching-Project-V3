@@ -5,7 +5,6 @@
 package frc.robot;
 
 import org.wpilib.framework.TimedRobot;
-import org.wpilib.xrp.XRPMotor;
 
 /**
  * The methods in this class are called automatically corresponding to each
