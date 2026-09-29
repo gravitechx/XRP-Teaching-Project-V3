@@ -20,6 +20,6 @@ Lesson 2.2
         3. Open the App Elastic 
             3.a Go to "Settings" and set "IP Address Mode" to "Localhost (127.0.0.1)
         4. Click on "Add Widget"
-        5. Open the "Robot" folder and drag "Robot Mode" onto grid
+        5. Open the "Telemetry" folder and drag "Robot Mode" onto grid
         6. You should see "Robot Mode" change when you switch between modes (In robot simulation tab)
     (Commit and push all project changes)

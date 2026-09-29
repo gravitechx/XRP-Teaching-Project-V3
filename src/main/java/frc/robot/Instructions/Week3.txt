@@ -6,7 +6,8 @@ Lesson 3.1
         2. Name it "mechanisms" (lowercase)
         3. Right click on "mechanisms" and "New File"
         4. Name it "Drivetrain.java"
-        5. Use Telemetry.log to log the name "Created Drivetrain" as "true" 
+        5. Create a constructor
+        6. In the constructor, use Telemetry.log to log the name "Created Drivetrain" as "true" 
     
     (Commit and push all project changes)
 
@@ -21,5 +22,16 @@ Lesson 3.2
         1. Go to Robot.java
         2. Create a Drivetrain instance variable 
         3. Assign that variable to a new Drivetrain instance
+    Test
+        1. Simulate Robot (Ctrl+Shift+P -> WPILIB:Simulate Robot Code)
+        2. Open the App Elastic 
+            3.a Go to "Settings" and set "IP Address Mode" to "Localhost (127.0.0.1)
+        3. Click on "Add Widget"
+        4. Open the "Telemetry" Folder
+            a. You shouldn't see anything yet
+        5. In the Simulation Window, click teleoperated
+        6. Check the Telemetry Folder and drag "Create Drivetrain" onto grid
+            a. It should say "True"
+        
 
     (Commit and push all project changes)
