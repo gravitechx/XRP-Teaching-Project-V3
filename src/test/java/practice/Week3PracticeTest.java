@@ -33,7 +33,6 @@ public class Week3PracticeTest {
         }
 
         // Getter methods to support assertions (Do not modify)
-        //TODO Uncomment out the 4 lines below
         public int getCanID() { 
             return this.canID; 
         }
@@ -48,10 +47,9 @@ public class Week3PracticeTest {
         private boolean isInverted = false;
 
         // TODO: Write a constructor that accepts (int canID, double gearRatio, boolean isInverted)
-        public PracticeElevator(int canID, double gearRatio, boolean isInverted) {
-            // TODO: Assign the parameter values to the instance fields using 'this'
-            
-        }
+        // TODO: Assign the parameter values to the instance fields using 'this'
+
+        
 
         // Getter methods to support assertions (Do not modify)
         public int getCanID() { return this.canID; }
@@ -63,7 +61,6 @@ public class Week3PracticeTest {
     // =========================================================================
     // JUNIT UNIT TESTS
     // =========================================================================
-    // TODO Uncomment this test
     @Test
     public void test1_DefaultConstructorAndInstanceFields() {
         // Instantiate a PracticeFlywheel using the default constructor
