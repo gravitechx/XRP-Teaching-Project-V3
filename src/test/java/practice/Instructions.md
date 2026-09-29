@@ -8,7 +8,7 @@
 Make sure you have switched to the correct branch before writing code!
 1. Use `ctrl+shift+p` 
 2. Type `git: Checkout to` 
-3. Click on your branch name (EX: `NC`)
+3. Click on your branch name (EX: `NateC`)
 
 ## Practice Problems
 * You will find your practice problems in files labeled by week
