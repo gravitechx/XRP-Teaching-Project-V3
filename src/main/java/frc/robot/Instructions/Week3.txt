@@ -21,10 +21,5 @@ Lesson 3.2
         1. Go to Robot.java
         2. Create a Drivetrain instance variable 
         3. Assign that variable to a new Drivetrain instance
-    Test 
-        1. Use "Ctrl+Shift+P" then "WPILib: Simulate Robot Code"
-        2. Open
-    
-
 
     (Commit and push all project changes)
