@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
+
 public class Week3PracticeTest {
 
     // =========================================================================
@@ -24,12 +24,14 @@ public class Week3PracticeTest {
         // TODO: Declare two private instance fields:
         // 1. An int named 'canID' (CAN id is the number we identify the motor with)
         // 2. A double named 'maxRPM'
-        
+        private int canID;
+        private double maxRPM;
 
         // Default constructor
         public PracticeFlywheel() {
             // TODO: Initialize 'canID' to 10 and 'maxRPM' to 5690.0 inside this default constructor
-            
+            this.canID = 10;
+            this.maxRPM = 5690.0;
         }
 
         // Getter methods to support assertions (Do not modify)
@@ -50,7 +52,9 @@ public class Week3PracticeTest {
         // TODO: Write a constructor that accepts (int canID, double gearRatio, boolean isInverted)
         public PracticeElevator(int canID, double gearRatio, boolean isInverted) {
             // TODO: Assign the parameter values to the instance fields using 'this'
-            
+            this.canID = canID;
+            this.gearRatio = gearRatio;
+            this.isInverted = isInverted;
         }
 
         // Getter methods to support assertions (Do not modify)
@@ -102,4 +106,3 @@ public class Week3PracticeTest {
     }
 }
 
-*/
