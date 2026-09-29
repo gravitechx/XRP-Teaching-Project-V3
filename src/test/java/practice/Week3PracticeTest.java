@@ -35,7 +35,6 @@ public class Week3PracticeTest {
         }
 
         // Getter methods to support assertions (Do not modify)
-        //TODO Uncomment out the 4 lines below
         public int getCanID() { 
             return this.canID; 
         }
@@ -67,7 +66,6 @@ public class Week3PracticeTest {
     // =========================================================================
     // JUNIT UNIT TESTS
     // =========================================================================
-    // TODO Uncomment this test
     @Test
     public void test1_DefaultConstructorAndInstanceFields() {
         // Instantiate a PracticeFlywheel using the default constructor
