@@ -11,13 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
 
 
-/*
+
 public class Week4PracticeTest {
 
     // =========================================================================
     // HELPER CLASSES (For Practice Exercises)
     // =========================================================================
-
+    /* 
      // PRACTICE 4.1: Void Methods & Mutators (Setters)
     public static class PracticeFlywheel {
         private double targetRPM;
@@ -43,6 +43,27 @@ public class Week4PracticeTest {
         public boolean getIsRunning() { return this.isRunning; }
     }
 
+    @Test
+    public void test1_VoidMethodsAndStateChanges() {
+        PracticeFlywheel flywheel = new PracticeFlywheel();
+
+        // Initial state
+        assertEquals(0.0, flywheel.getTargetRPM(), 0.001, "Flywheel initial RPM should be 0");
+        assertFalse(flywheel.getIsRunning(), "Flywheel initially should not be running");
+
+        // Execute spinUp
+        flywheel.spinUp(3000.0);
+        assertEquals(3000.0, flywheel.getTargetRPM(), 0.001, "Flywheel target RPM should update to 3000");
+        assertTrue(flywheel.getIsRunning(), "Flywheel should be running after spinUp()");
+
+        // Execute stop
+        flywheel.stop();
+        assertEquals(0.0, flywheel.getTargetRPM(), 0.001, "Flywheel target RPM should be 0 after stop()");
+        assertFalse(flywheel.getIsRunning(), "Flywheel should not be running after stop()");
+    }
+
+    */
+   /*
      // PRACTICE 4.2: Return Values & Accessors (Getters)
     public static class PracticeEncoder {
         private int rawTicks;
@@ -91,29 +112,6 @@ public class Week4PracticeTest {
         public double getAngle() { return this.currentAngleDegrees; }
     }
 
-
-    // =========================================================================
-    // JUNIT UNIT TESTS
-    // =========================================================================
-    // @Test
-    public void test1_VoidMethodsAndStateChanges() {
-        PracticeFlywheel flywheel = new PracticeFlywheel();
-
-        // Initial state
-        assertEquals(0.0, flywheel.getTargetRPM(), 0.001, "Flywheel initial RPM should be 0");
-        assertFalse(flywheel.getIsRunning(), "Flywheel initially should not be running");
-
-        // Execute spinUp
-        flywheel.spinUp(3000.0);
-        assertEquals(3000.0, flywheel.getTargetRPM(), 0.001, "Flywheel target RPM should update to 3000");
-        assertTrue(flywheel.getIsRunning(), "Flywheel should be running after spinUp()");
-
-        // Execute stop
-        flywheel.stop();
-        assertEquals(0.0, flywheel.getTargetRPM(), 0.001, "Flywheel target RPM should be 0 after stop()");
-        assertFalse(flywheel.getIsRunning(), "Flywheel should not be running after stop()");
-    }
-
     @Test
     public void test2_ReturnValuesAndCalculations() {
         PracticeEncoder encoder = new PracticeEncoder(4096);
@@ -144,6 +142,6 @@ public class Week4PracticeTest {
         assertEquals(0.0, arm.getAngle(), 0.001, "Arm angle should clamp to MIN_ANGLE (0.0)");
         assertFalse(arm.isAtTopLimit(), "Arm should report false for isAtTopLimit() when at 0 degrees");
     }
+    */
 }
 
-*/

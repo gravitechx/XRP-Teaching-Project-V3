@@ -18,8 +18,9 @@ import org.junit.jupiter.api.BeforeEach;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
+
 public class Week2PracticeTest {
+/* 
     private MockTelemetryBackend backend;
 
     // =========================================================================
@@ -87,11 +88,11 @@ public class Week2PracticeTest {
         assertEquals(Constants.TEAM_NUMBER, 6619);
     }
 
-
+*/
     // =========================================================================
     // LESSON 2.2: CONDITIONALS & BOOLEAN LOGIC
     // =========================================================================
-
+/* 
      // Helper method simulating speed limit checks for safety.
     private double calculateSafeSpeed(double reqSpeed, boolean eStop) {
         boolean emergencyStop = eStop;
@@ -177,5 +178,6 @@ public class Week2PracticeTest {
         backend = new MockTelemetryBackend();
         TelemetryRegistry.registerBackend("/", backend);
     }
+
+    */
 }
-*/

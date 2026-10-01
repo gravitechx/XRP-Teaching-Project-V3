@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
-public class Week3PracticeTest {
 
+public class Week3PracticeTest {
+/* 
     // =========================================================================
     // HELPER CLASSES (For Practice Exercises)
     // =========================================================================
@@ -38,7 +38,18 @@ public class Week3PracticeTest {
         }
         public double getMaxRPM() { return this.maxRPM; }
     }
+    @Test
+    public void test1_DefaultConstructorAndInstanceFields() {
+        // Instantiate a PracticeFlywheel using the default constructor
+        PracticeFlywheel flywheel = new PracticeFlywheel();
 
+        // Verify that default constructor properly set internal instance fields
+        assertEquals(10, flywheel.getCanID(), "Flywheel default CAN ID should be 10");
+        assertEquals(5690.0, flywheel.getMaxRPM(), 0.001, "Flywheel default max RPM should be 5690.0");
+    }
+
+    */
+    /* 
     // PRACTICE 3.2: Parameterized Constructor & 'this' Keyword
     // TODO: Implement the constructor using parameters and 'this'.
     public static class PracticeElevator {
@@ -61,15 +72,7 @@ public class Week3PracticeTest {
     // =========================================================================
     // JUNIT UNIT TESTS
     // =========================================================================
-    @Test
-    public void test1_DefaultConstructorAndInstanceFields() {
-        // Instantiate a PracticeFlywheel using the default constructor
-        PracticeFlywheel flywheel = new PracticeFlywheel();
-
-        // Verify that default constructor properly set internal instance fields
-        assertEquals(10, flywheel.getCanID(), "Flywheel default CAN ID should be 10");
-        assertEquals(5690.0, flywheel.getMaxRPM(), 0.001, "Flywheel default max RPM should be 5690.0");
-    }
+    
 
     @Test
     public void test2_ParameterizedConstructorAndFieldAssignment() {
@@ -97,6 +100,5 @@ public class Week3PracticeTest {
         assertNotEquals(elevatorA.getCanID(), elevatorB.getCanID(), "Elevator objects should have distinct CAN IDs");
         assertNotEquals(elevatorA.getGearRatio(), elevatorB.getGearRatio(), "Elevator objects should have distinct gear ratios");
     }
+    */
 }
-
-*/
