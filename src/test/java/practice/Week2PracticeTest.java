@@ -18,7 +18,7 @@ import org.junit.jupiter.api.BeforeEach;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
+
 public class Week2PracticeTest {
     private MockTelemetryBackend backend;
 
@@ -33,16 +33,16 @@ public class Week2PracticeTest {
         String name = "Elia";
 
         // assign an integer 1 for the robot's CAN ID
-        int driveCanID = 423;
+        int driveCanID = 1;
 
         // Declare and assign a double 0.85 for default motor speed percentage (0.0 to 1.0)
-        double defaultSpeed = 23.34;
+        double defaultSpeed = 0.85;
 
         // Declare and assign a boolean true indicating if the brake mode is active
-        boolean isBrakeEnabled = false;
+        boolean isBrakeEnabled = true;
 
         // Declare and assign a String (subteamName) for the subteam name
-        String subteamName = "";
+        String subteamName = "Gojo";
 
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertEquals(1, driveCanID, "driveCanID should equal 1");
@@ -53,7 +53,7 @@ public class Week2PracticeTest {
 
     @Test
     public void test2_ManipulatingVariablesAndComments() {
-        double leftMotorSpeed = 0.50;
+        double leftMotorSpeed = 0.50 + 0.10;
         double rightMotorSpeed = 0.50;
 
         // TODO: Add 0.10 to leftMotorSpeed
@@ -61,11 +61,11 @@ public class Week2PracticeTest {
 
         // TODO: Fix the line below by uncommenting it.
         // Hint: Use Ctrl + / (or Cmd + /) to quickly toggle comments.
-
-        // rightMotorSpeed = rightMotorSpeed * 2.0;
+// 
+        rightMotorSpeed = rightMotorSpeed * 2.0;
 
         // TODO: Comment out the line below so leftMotorSpeed isn't reset to zero!
-        leftMotorSpeed = 0.0;
+        // leftMotorSpeed = 0.0;
 
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertEquals(0.60, leftMotorSpeed, 0.001, "leftMotorSpeed should be 0.60");
@@ -178,4 +178,3 @@ public class Week2PracticeTest {
         TelemetryRegistry.registerBackend("/", backend);
     }
 }
-*/
