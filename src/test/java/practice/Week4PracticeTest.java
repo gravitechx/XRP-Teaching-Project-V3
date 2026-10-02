@@ -2,6 +2,7 @@ package practice;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.wpilib.units.Units.Revolutions;
 
 
 //  * Week 4 Practice Problems: Java Methods, Parameters, & Return Values
@@ -11,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
 
 
-/*
+
 public class Week4PracticeTest {
 
     // =========================================================================
@@ -28,6 +29,14 @@ public class Week4PracticeTest {
             this.isRunning = false;
         }
 
+        public void spinUp(double rpm){
+            this.targetRPM = rpm;
+            this.isRunning = true;
+        }
+        public void stop(){
+            this.targetRPM = 0.0;
+            this.isRunning = false;
+        }
         // TODO 1: Write a public void method named 'spinUp' that takes a double parameter 'rpm'
         // - Sets 'this.targetRPM' to the parameter 'rpm'
         // - Sets 'this.isRunning' to true
@@ -50,6 +59,12 @@ public class Week4PracticeTest {
 
         public PracticeEncoder(int initialTicks) {
             this.rawTicks = initialTicks;
+        }
+        public int getRawTicks(){
+            return this.rawTicks;
+        }
+        public double getRevolutions(){
+            return rawTicks / TICKS_PER_REVOLUTION;
         }
 
         // TODO 1: Write a public method 'getRawTicks' that returns an int
@@ -80,12 +95,22 @@ public class Week4PracticeTest {
         // - If newAngle > MAX_ANGLE, set currentAngleDegrees to MAX_ANGLE
         // - Otherwise, set currentAngleDegrees to newAngle
         public void setAngle(double newAngle) {
-            
+            if (newAngle < MIN_ANGLE){
+                currentAngleDegrees = MIN_ANGLE;
+            }
+            else if (newAngle > MAX_ANGLE){
+                currentAngleDegrees = MAX_ANGLE;
+            }
+            else{
+                currentAngleDegrees = newAngle;
+            }
         }
 
         // TODO 2: Write a public method 'isAtTopLimit()' returning a boolean
         // Returns true if currentAngleDegrees == MAX_ANGLE, otherwise false
-        
+        public boolean isAtTopLimit(){
+            return (currentAngleDegrees == MAX_ANGLE);
+        }
 
         // Getter method (Do not modify)
         public double getAngle() { return this.currentAngleDegrees; }
@@ -145,5 +170,3 @@ public class Week4PracticeTest {
         assertFalse(arm.isAtTopLimit(), "Arm should report false for isAtTopLimit() when at 0 degrees");
     }
 }
-
-*/

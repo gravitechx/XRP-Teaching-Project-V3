@@ -18,7 +18,7 @@ import org.junit.jupiter.api.BeforeEach;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
+
 public class Week2PracticeTest {
     private MockTelemetryBackend backend;
 
@@ -57,6 +57,7 @@ public class Week2PracticeTest {
         double rightMotorSpeed = 0.50;
 
         // TODO: Add 0.10 to leftMotorSpeed
+        leftMotorSpeed += 10;
 
 
         // TODO: Fix the line below by uncommenting it.
@@ -65,7 +66,7 @@ public class Week2PracticeTest {
         // rightMotorSpeed = rightMotorSpeed * 2.0;
 
         // TODO: Comment out the line below so leftMotorSpeed isn't reset to zero!
-        leftMotorSpeed = 0.0;
+        //leftMotorSpeed = 0.0;
 
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertEquals(0.60, leftMotorSpeed, 0.001, "leftMotorSpeed should be 0.60");
@@ -103,6 +104,18 @@ public class Week2PracticeTest {
         // 2. Else if requestedSpeed is greater than 1.0, set returnValue to 1.0.
         // 3. Else if requestedSpeed is less than -1.0, set returnValue to -1.0.
         // 4. Otherwise, set returnValue to requestedSpeed.
+        if (emergencyStop){
+            returnValue = 0.0;
+        }
+        else if (requestedSpeed > 1.0){
+            returnValue = 1.0;
+        }
+        else if (requestedSpeed < -1.0){
+            returnValue = -1.0;
+        }
+        else{
+            returnValue = requestedSpeed;
+        }
 
 
 
@@ -178,4 +191,3 @@ public class Week2PracticeTest {
         TelemetryRegistry.registerBackend("/", backend);
     }
 }
-*/
