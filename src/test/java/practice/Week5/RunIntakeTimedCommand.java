@@ -1,41 +1,43 @@
-package practice.Week5;
+// package practice.Week5;
 
 
-/**
- * Practice Problem 4.1: Timed Command with Subsystem Requirements
- */
+// /**
+//  * Practice Problem 4.1: Timed Command with Subsystem Requirements
+//  */
 
-/*
-public class RunIntakeTimedCommand  {
-    private final PracticeIntake intake;
-    private int loopCounter = 0;
-    // TODO Make the constructor take in an intake object and assign it to the intake field
-    // TODO Call addRequirments and pass in the intake object 
-    public RunIntakeTimedCommand() {
-        intake = null;
-    }
 
-    @Override
-    public void initialize() {
-        // TODO Read the PracticeIntake.java file and run the intake
-        // TODO Reset the loopCounter variable to zero
-    }
+// public class RunIntakeTimedCommand  {
+//     private final PracticeIntake intake;
+//     private int loopCounter = 0;
+//     // TODO Make the constructor take in an intake object and assign it to the intake field
+//     // TODO Call addRequirments and pass in the intake object 
+//     public RunIntakeTimedCommand() {
+//         intake = null;
+//     }
+
+//     @Override
+//     public void initialize() {
+//         // TODO Read the PracticeIntake.java file and run the intake
+//         intake.setRunning(true);
+//         loopCounter = 0;
+//         // TODO Reset the loopCounter variable to zero
+//     }
     
-    @Override
-    public void execute() {
-        //TODO Increment loop counter
-    }
+//     @Override
+//     public void execute() {
+//         //TODO Increment loop counter
+//         loopCounter += 1;
+//     }
 
-    @Override
-    public boolean isFinished() {
-        // TODO make isFinished return true when loopCounter is greater than or equal to 10
-        return false;
-    }
+//     @Override
+//     public boolean isFinished() {
+//         // TODO make isFinished return true when loopCounter is greater than or equal to 10
+//         return false;
+//     }
 
-    @Override
-    public void end(boolean interrupted) {
-        // TODO stop the intake
-    }
-}
-
-*/
+//     @Override
+//     public void end(boolean interrupted) {
+//         // TODO stop the intake
+//         intake.setRunning(false);
+//     }
+// }
