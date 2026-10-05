@@ -1,15 +1,23 @@
 package practice.Week5;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.wpilib.command3.Command;
+import org.wpilib.command3.Scheduler;
+import org.wpilib.telemetry.MockTelemetryBackend;
+import org.wpilib.telemetry.TelemetryRegistry;
 
 
-/*
+/* 
 public class Week5PracticeTest {
-    // TODO Uncomment out every test
+    // TODO Work on problems in PracticeIntake.java, RobotMathUtils.java, and Shooter.java
+    private MockTelemetryBackend backend;
+
     @Test
-    void testVoltageClampingAndEStop() {
-        EncapsulatedShooter shooter = new EncapsulatedShooter();
+    void testVoltageClamping() {
+        Shooter shooter = new Shooter();
 
         // Over-voltage test
         shooter.setVoltage(15.0);
@@ -23,20 +31,6 @@ public class Week5PracticeTest {
         shooter.setVoltage(8.5);
         assertEquals(8.5, shooter.getVoltage(), 0.001);
 
-        // E-stop test
-        // shooter.triggerEStop();
-        // assertTrue(shooter.isEStopped());
-        // assertEquals(0.0, shooter.getVoltage(), 0.001);
-
-        // Attempting to set voltage while E-stopped should be ignored
-        shooter.setVoltage(10.0);
-        assertEquals(0.0, shooter.getVoltage(), 0.001);
-
-        // Reset E-stop and re-test
-        // shooter.resetEStop();
-        // assertFalse(shooter.isEStopped());
-        shooter.setVoltage(10.0);
-        assertEquals(10.0, shooter.getVoltage(), 0.001);
     }
 
     @Test
@@ -51,44 +45,44 @@ public class Week5PracticeTest {
         assertEquals(628.318, RobotMathUtils.rpmToRadsPerSec(6000.0), 0.01);
     }
 
+    
+
     @Test
     void testCommandLifecycle() {
-        MockTimedCommand command = new MockTimedCommand();
-
-        command.initialize();
-        assertTrue(command.wasInitialized);
-
-        // Run 3 cycles
-        for (int i = 0; i < 3; i++) {
-            command.execute();
-        }
-        assertFalse(command.isFinished());
-
-        // Run 2 more cycles (5 total)
-        command.execute();
-        command.execute();
-        assertTrue(command.isFinished());
-
-        command.end(false);
-        assertTrue(command.wasEnded);
-        assertFalse(command.endInterruptedValue);
+        Shooter shooter = new Shooter();
+        Scheduler.getDefault().run();
+        Scheduler.getDefault().schedule(shooter.getShootCommand());
+        Scheduler.getDefault().run();
+        assertTrue(backend.getLastAction("Shooter command").value().toString().contains("running"));
     }
 
     @Test
-    void testRunIntakeTimedCommand() {
+    void testRunIntakeCommand() {
         PracticeIntake intake = new PracticeIntake();
-        RunIntakeTimedCommand command = new RunIntakeTimedCommand(intake);
+        Command command = intake.runIntakeCommand();
 
         // Verify subsystem requirement declaration
-        assertTrue(command.getRequirements().contains(intake));
+        assertTrue(command.requirements().contains(intake));
 
         // Test execution cycle
         assertFalse(intake.isRunning());
-        command.initialize();
+        Scheduler.getDefault().schedule(command);
+        Scheduler.getDefault().run();
         assertTrue(intake.isRunning());
+    }
 
-        command.end(false);
-        assertFalse(intake.isRunning());
+    @Test 
+    void testShooterDefaultCommand(){
+        Shooter shooter = new Shooter();
+        Scheduler.getDefault().run();
+        assertTrue(Scheduler.getDefault().isScheduledOrRunning(shooter.getDefaultCommand()));
+    }
+
+    @BeforeEach
+    public void setupTelemetry(){
+        TelemetryRegistry.reset();
+        backend = new MockTelemetryBackend();
+        TelemetryRegistry.registerBackend("/", backend);
     }
 }
 */

@@ -1,5 +1,6 @@
 package practice.Week5;
 
+import org.wpilib.command3.Command;
 import org.wpilib.command3.Mechanism;
 
 /**
@@ -15,5 +16,14 @@ public class PracticeIntake implements Mechanism {
 
     public boolean isRunning() {
         return running;
+    }
+
+    // Create "runIntakeCommand" that returns a command
+    // set it to have a priority of 5
+    // set running to true
+    public Command runIntakeCommand(){
+        return run(coroutine -> {
+            this.running = true;
+        }).named("runIntakeCommand");
     }
 }
