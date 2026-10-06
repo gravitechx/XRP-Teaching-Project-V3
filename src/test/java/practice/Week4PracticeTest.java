@@ -67,7 +67,7 @@ public class Week4PracticeTest {
         // TODO 2: Write a public method 'getRevolutions' that returns a double
         // Formula: rawTicks / TICKS_PER_REVOLUTION
         public double getRevolutions() {
-            return (getRawTicks() / TICKS_PER_REVOLUTION);
+            return (rawTicks / TICKS_PER_REVOLUTION);
         }
 
         // Helper method to set ticks during tests
