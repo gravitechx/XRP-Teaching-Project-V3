@@ -42,7 +42,7 @@ public class Week2PracticeTest {
         boolean isBrakeEnabled = true;
 
         // Declare and assign a String (subteamName) for the subteam name
-        String subteamName = "p";
+        String subteamName = "Programming";
 
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertEquals(1, driveCanID, "driveCanID should equal 1");
@@ -105,7 +105,15 @@ public class Week2PracticeTest {
         // 2. Else if requestedSpeed is greater than 1.0, set returnValue to 1.0.
         // 3. Else if requestedSpeed is less than -1.0, set returnValue to -1.0.
         // 4. Otherwise, set returnValue to requestedSpeed.
-        boolean emergencyStop = true;
+        if (emergencyStop) {
+            returnValue = 0.0;
+        } else if (requestedSpeed > 1) {
+            returnValue = 1;
+        } else if (requestedSpeed < -1.0) {
+            returnValue = -1.0;
+        } else {
+            returnValue = requestedSpeed;
+        }
         
 
 
@@ -123,20 +131,21 @@ public class Week2PracticeTest {
         int age = 10;
         // log age with name "yearsOld"
         Telemetry.log("yearsOld", age);
+        
 
 
         double speed = 10;
         // log speed with name "speed"
-
+        Telemetry.log("speed",speed);
         double batteryVoltage = 12.5;
         // log batteryVoltage with name "batteryVoltage"
-
+        Telemetry.log("batteryVoltage",batteryVoltage);
         String status = "OK";
         // log status with name "status"
-
+        Telemetry.log("status",status);
         boolean isEnabled = true;
         // log isEnabled with name "isEnabled"
-        
+        Telemetry.log("isEnabled",isEnabled);
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertTrue(backend.getLastAction("speed").value().toString().contains("10"), "Telemetry speed value should be 10");
         assertTrue(backend.getLastAction("batteryVoltage").value().toString().contains("12.5"), "Telemetry batteryVoltage value should be 12.5");
@@ -153,7 +162,9 @@ public class Week2PracticeTest {
         boolean returnValue = false;
         // TODO: set returnValue to true ONLY IF the battery is powered AND DriverStation is connected AND there are NO errors.
         // Use logical operators (&&, ||, !)
-        
+        if(hasBatteryPower && isDSConnected && hasErrors == false) {
+            returnValue = true;
+        }
         
         return returnValue;
     }
