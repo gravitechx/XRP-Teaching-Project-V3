@@ -96,6 +96,10 @@ public class Week2PracticeTest {
     // =========================================================================
 
      // Helper method simulating speed limit checks for safety.
+     // == checks if equal to
+     // || or
+     // && and
+     // != not equal to
     private double calculateSafeSpeed(double reqSpeed, boolean eStop) {
         boolean emergencyStop = eStop;
         double requestedSpeed = reqSpeed;
@@ -106,9 +110,20 @@ public class Week2PracticeTest {
         // 2. Else if requestedSpeed is greater than 1.0, set returnValue to 1.0.
         // 3. Else if requestedSpeed is less than -1.0, set returnValue to -1.0.
         // 4. Otherwise, set returnValue to requestedSpeed.
-        boolean emergencyStop = true;
-        boolean returnValue = 1.0 < requestedSpeed;
-        boolean returnValue = requestedSpeed < -1.0;
+        if (emergencyStop == true){
+         returnValue = 0;
+        
+        }
+        else if(requestedSpeed > 1){
+            returnValue = 1;
+        }
+        else if(requestedSpeed < -1.0){
+            returnValue = -1;
+            
+        }
+        else(returnValue == requestedSpeed){
+
+        }
         
 
 
@@ -131,12 +146,15 @@ public class Week2PracticeTest {
 
         double speed = 10;
         // log speed with name "speed"
+        Telemetry.log("speed", speed);
 
         double batteryVoltage = 12.5;
         // log batteryVoltage with name "batteryVoltage"
+        Telemetry.log("batteryVoltage", batteryVoltage);
 
         String status = "OK";
         // log status with name "status"
+        Telemetry.log("status", status);
 
         boolean isEnabled = true;
         // log isEnabled with name "isEnabled"
