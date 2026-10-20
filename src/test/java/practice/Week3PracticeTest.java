@@ -13,7 +13,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Week3PracticeTest {
-/* 
+
+public static class PracticeFlyWheel{
+int Canid = 10 ;
+double maxRPM = 3.1;
+}
+
+
+
+ 
     // =========================================================================
     // HELPER CLASSES (For Practice Exercises)
     // =========================================================================
@@ -24,6 +32,7 @@ public class Week3PracticeTest {
         // TODO: Declare two private instance fields:
         // 1. An int named 'canID' (CAN id is the number we identify the motor with)
         // 2. A double named 'maxRPM'
+        
         
 
         // Default constructor
@@ -48,8 +57,8 @@ public class Week3PracticeTest {
         assertEquals(5690.0, flywheel.getMaxRPM(), 0.001, "Flywheel default max RPM should be 5690.0");
     }
 
-    */
-    /* 
+    
+    
     // PRACTICE 3.2: Parameterized Constructor & 'this' Keyword
     // TODO: Implement the constructor using parameters and 'this'.
     public static class PracticeElevator {
@@ -100,5 +109,5 @@ public class Week3PracticeTest {
         assertNotEquals(elevatorA.getCanID(), elevatorB.getCanID(), "Elevator objects should have distinct CAN IDs");
         assertNotEquals(elevatorA.getGearRatio(), elevatorB.getGearRatio(), "Elevator objects should have distinct gear ratios");
     }
-    */
+    
 }

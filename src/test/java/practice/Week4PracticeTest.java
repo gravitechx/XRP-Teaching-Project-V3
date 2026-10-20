@@ -17,7 +17,7 @@ public class Week4PracticeTest {
     // =========================================================================
     // HELPER CLASSES (For Practice Exercises)
     // =========================================================================
-    /* 
+     
      // PRACTICE 4.1: Void Methods & Mutators (Setters)
     public static class PracticeFlywheel {
         private double targetRPM;
@@ -62,8 +62,8 @@ public class Week4PracticeTest {
         assertFalse(flywheel.getIsRunning(), "Flywheel should not be running after stop()");
     }
 
-    */
-   /*
+    
+   
      // PRACTICE 4.2: Return Values & Accessors (Getters)
     public static class PracticeEncoder {
         private int rawTicks;
@@ -142,6 +142,6 @@ public class Week4PracticeTest {
         assertEquals(0.0, arm.getAngle(), 0.001, "Arm angle should clamp to MIN_ANGLE (0.0)");
         assertFalse(arm.isAtTopLimit(), "Arm should report false for isAtTopLimit() when at 0 degrees");
     }
-    */
+    
 }
 
