@@ -94,7 +94,7 @@ public class Week2PracticeTest {
     // =========================================================================
     // LESSON 2.2: CONDITIONALS & BOOLEAN LOGIC
     // =========================================================================
-/* 
+ 
      // Helper method simulating speed limit checks for safety.
     private double calculateSafeSpeed(double reqSpeed, boolean eStop) {
         boolean emergencyStop = eStop;
@@ -106,7 +106,19 @@ public class Week2PracticeTest {
         // 2. Else if requestedSpeed is greater than 1.0, set returnValue to 1.0.
         // 3. Else if requestedSpeed is less than -1.0, set returnValue to -1.0.
         // 4. Otherwise, set returnValue to requestedSpeed.
-
+        
+        if (emergencyStop == true) {
+            returnValue = 0;
+        }
+        else if (requestedSpeed > 1.0) {
+            returnValue = 1.0;
+        }
+        else if (requestedSpeed > -1.0) {
+            returnValue = -1.0;
+        }
+        else {
+            returnValue = requestedSpeed;
+        }
 
 
         return returnValue;
@@ -181,5 +193,5 @@ public class Week2PracticeTest {
         TelemetryRegistry.registerBackend("/", backend);
     }
 
-    */
+    
 }
