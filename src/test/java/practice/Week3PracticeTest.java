@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 //  * 3. Stage, commit, and push changes on your branch ([FirstName][LastInitial]) with your initials!
  
 
-/*
+
 public class Week3PracticeTest {
 
     // =========================================================================
@@ -24,18 +24,20 @@ public class Week3PracticeTest {
         // TODO: Declare two private instance fields:
         // 1. An int named 'canID' (CAN id is the number we identify the motor with)
         // 2. A double named 'maxRPM'
-        
+        int canID;
+        double maxRPM;
 
         // Default constructor
         public PracticeFlywheel() {
             // TODO: Initialize 'canID' to 10 and 'maxRPM' to 5690.0 inside this default constructor
-            
+            canID = 10;
+            maxRPM = 5690.0;
         }
 
         // Getter methods to support assertions (Do not modify)
         public int getCanID() { 
             return this.canID; 
-        }
+        } 
         public double getMaxRPM() { return this.maxRPM; }
     }
 
@@ -45,7 +47,11 @@ public class Week3PracticeTest {
         private int canID = -1;
         private double gearRatio = -1;
         private boolean isInverted = false;
-
+        public PracticeElevator(int canID, double gearRatio, boolean isInverted){
+            this.canID = canID;
+            this.gearRatio = gearRatio;
+            this.isInverted = isInverted;
+        }
         // TODO: Write a constructor that accepts (int canID, double gearRatio, boolean isInverted)
         // TODO: Assign the parameter values to the instance fields using 'this'
 
@@ -65,7 +71,6 @@ public class Week3PracticeTest {
     public void test1_DefaultConstructorAndInstanceFields() {
         // Instantiate a PracticeFlywheel using the default constructor
         PracticeFlywheel flywheel = new PracticeFlywheel();
-
         // Verify that default constructor properly set internal instance fields
         assertEquals(10, flywheel.getCanID(), "Flywheel default CAN ID should be 10");
         assertEquals(5690.0, flywheel.getMaxRPM(), 0.001, "Flywheel default max RPM should be 5690.0");
@@ -99,4 +104,3 @@ public class Week3PracticeTest {
     }
 }
 
-*/
