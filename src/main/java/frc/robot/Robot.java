@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import org.wpilib.command3.button.CommandXboxController;
 import org.wpilib.framework.TimedRobot;
 
 /**
@@ -14,15 +15,15 @@ import org.wpilib.framework.TimedRobot;
  * this project, you must also update the Main.java file in the project.
  */
 public class Robot extends TimedRobot {
-    /**
-     * This function is run when the robot is first started up and should be used
-     * for any
-     * initialization code.
-     */
+    CommandXboxController controller;
+    Drivetrain drivetrain;
+
     public Robot() {
-        // Instantiate our RobotContainer. This will perform all our button bindings,
-        // and put our
-        // autonomous chooser on the dashboard.
+        drivetrain = new Drivetrain();
+        controller = new CommandXboxController(0);
+        controller.a().whileTrue(drivetrain.driveCommand());
+        drivetrain.setDefaultCommand(drivetrain.driveCommand());
+        
     }
 
     /**
@@ -37,10 +38,9 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotPeriodic() {
-        //
+        
     }
 
-    /** This function is called once each time the robot enters Disabled mode. */
     @Override
     public void disabledInit() {
     }
@@ -53,7 +53,6 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
     }
 
-    /** This function is called periodically during autonomous. */
     @Override
     public void autonomousPeriodic() {
     }
@@ -63,17 +62,15 @@ public class Robot extends TimedRobot {
 
     }
 
-    /** This function is called periodically during operator control. */
     @Override
     public void teleopPeriodic() {
     }
 
     @Override
     public void utilityInit() {
-        // Cancels all running commands at the start of test mode.
+
     }
 
-    /** This function is called periodically during test mode. */
     @Override
     public void utilityPeriodic() {
     }
