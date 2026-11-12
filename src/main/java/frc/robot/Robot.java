@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import java.util.function.DoubleSupplier;
+
 import org.wpilib.command3.Scheduler;
 import org.wpilib.command3.button.CommandXboxController;
 import org.wpilib.framework.TimedRobot;
@@ -22,7 +24,7 @@ public class Robot extends TimedRobot {
     public Robot() {
         drivetrain = new Drivetrain();
         controller = new CommandXboxController(0);
-        controller.a().whileTrue(drivetrain.driveCommand());
+        drivetrain.setDefaultCommand(drivetrain.driveCommand(() -> controller.getRightTrigger()));
         
     }
 
