@@ -5,6 +5,7 @@
 package frc.robot;
 
 import org.wpilib.framework.TimedRobot;
+import org.wpilib.telemetry.Telemetry;
 
 /**
  * The methods in this class are called automatically corresponding to each
@@ -51,6 +52,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
+        Telemetry.log(name: "Robot Mode");
     }
 
     /** This function is called periodically during autonomous. */
@@ -60,6 +62,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void teleopInit() {
+        Telemetry.log(name: "Robot Mode");
 
     }
 
@@ -70,6 +73,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void utilityInit() {
+        Telemetry.log(name: "Robot Mode");
         // Cancels all running commands at the start of test mode.
     }
 
