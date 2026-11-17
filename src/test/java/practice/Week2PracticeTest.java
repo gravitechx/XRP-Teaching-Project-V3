@@ -158,7 +158,7 @@ public class Week2PracticeTest {
 
         boolean isEnabled = true;
         // log isEnabled with name "isEnabled"
-        
+        Telemetry.log(name: "batteryVoltage", batteryVoltage);
         // --- DO NOT MODIFY BELOW THIS LINE ---
         assertTrue(backend.getLastAction("speed").value().toString().contains("10"), "Telemetry speed value should be 10");
         assertTrue(backend.getLastAction("batteryVoltage").value().toString().contains("12.5"), "Telemetry batteryVoltage value should be 12.5");
