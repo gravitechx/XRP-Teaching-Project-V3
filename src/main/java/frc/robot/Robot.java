@@ -4,7 +4,12 @@
 
 package frc.robot;
 
+import org.wpilib.command3.Scheduler;
+import org.wpilib.command3.button.CommandXboxController;
+import org.wpilib.driverstation.XboxController;
 import org.wpilib.framework.TimedRobot;
+
+import frc.robot.mechanisms.Drivetrain;
 
 /**
  * The methods in this class are called automatically corresponding to each
@@ -19,10 +24,17 @@ public class Robot extends TimedRobot {
      * for any
      * initialization code.
      */
+
+    public CommandXboxController controller;
+    public Drivetrain drivetrain;
+
     public Robot() {
         // Instantiate our RobotContainer. This will perform all our button bindings,
         // and put our
         // autonomous chooser on the dashboard.
+        controller = new CommandXboxController(0);
+        drivetrain = new Drivetrain();
+        drivetrain.setDefaultCommand(drivetrain.defaultCommand(() -> controller.getLeftY(), () -> controller.getRightX()));
     }
 
     /**
@@ -38,6 +50,8 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         //
+
+        Scheduler.getDefault().run();
     }
 
     /** This function is called once each time the robot enters Disabled mode. */
