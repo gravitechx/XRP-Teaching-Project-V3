@@ -32,10 +32,20 @@ public class Robot extends TimedRobot {
         // Instantiate our RobotContainer. This will perform all our button bindings,
         // and put our
         // autonomous chooser on the dashboard.
+
         controller = new CommandXboxController(0);
+
+        
+        
         drivetrain = new Drivetrain();
         drivetrain.setDefaultCommand(drivetrain.defaultCommand(() -> controller.getLeftY(), () -> controller.getRightX()));
+        configureKeybinds();
     }
+
+    public void configureKeybinds() {
+        controller.x().whileTrue(drivetrain.spinToSetAngle(90));
+    }
+
 
     /**
      * This function is called every 20 ms, no matter the mode. Use this for items
